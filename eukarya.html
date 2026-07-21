@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AR Lab Atlas - Eukaryotic Cell</title>
+  
+  <!-- Loads Google <model-viewer> engine -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8fafc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      padding: 1rem;
+      background: #0f172a;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 700px;
+      margin: 1.5rem 0;
+    }
+
+    model-viewer {
+      width: 100%;
+      height: 480px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .ar-button {
+      background-color: #2563eb;
+      color: #ffffff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 20px;
+      font-weight: 600;
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      cursor: pointer;
+    }
+
+    .notes {
+      background: #ffffff;
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      border: 1px solid #e2e8f0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AR Biology Lab Atlas</h1>
+  </header>
+
+  <div class="container">
+    <h2>Specimen 01: Eukaryotic Cell</h2>
+
+    <model-viewer 
+      src="models/eukaryote_cell.glb" 
+      ios-src="models/Eukaryote_Cell.usdz" 
+      alt="3D Eukaryotic Cell" 
+      ar 
+      ar-modes="webxr scene-viewer quick-look" 
+      camera-controls 
+      touch-action="pan-y" 
+      auto-rotate 
+      shadow-intensity="1">
+      
+      <button slot="ar-button" class="ar-button">
+        📷 View in Real Space (AR)
+      </button>
+    </model-viewer>
+
+    <div class="notes">
+      <h3>Student Instructions</h3>
+      <p>• Rotate & zoom: Drag one or two fingers on the 3D model above.</p>
+      <p>• AR Mode: Tap <strong>View in Real Space</strong> to place the specimen on your table or floor.</p>
+    </div>
+  </div>
+
+</body>
+</html>
