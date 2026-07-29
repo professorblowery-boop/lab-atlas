@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D AR Biology 1407 Lab Atlas</title>
+  
+  <style>
+    /* Global Styles */
+    :root {
+      --primary: #2563eb;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --subtext: #475569;
+      --border: #e2e8f0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      background-color: #0f172a;
+      color: #ffffff;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.6rem;
+    }
+
+    header p {
+      margin: 0.5rem 0 0 0;
+      color: #94a3b8;
+      font-size: 0.95rem;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 2rem 0;
+    }
+
+    /* Grid Layout for Cards */
+    .atlas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    /* Specimen Card Design */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    }
+
+    .card-badge {
+      display: inline-block;
+      align-self: flex-start;
+      background-color: #eff6ff;
+      color: var(--primary);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 6px;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+    }
+
+    .card h2 {
+      font-size: 1.2rem;
+      margin: 0 0 0.25rem 0;
+    }
+
+    .card .scientific-name {
+      font-style: italic;
+      color: var(--subtext);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-btn {
+      display: block;
+      text-align: center;
+      background-color: var(--primary);
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-top: 1rem;
+    }
+
+    .card-btn:hover {
+      background-color: #1d4ed8;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 2rem;
+      color: var(--subtext);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AR Biology Lab Atlas</h1>
+    <p>Select a specimen to view in 3D / Place in Real Space (AR) or use your VR browser</p>
+  </header>
+
+  <div class="container">
+    <div class="atlas-grid">
+
+      <!-- Specimen Card 1 -->
+      <div class="card">
+        <div>
+          <span class="card-badge">Specimen 01</span>
+          <h2>American Bullfrog</h2>
+          <div class="scientific-name">Rana catesbeiana</div>
+          <p style="font-size: 0.85rem; color: #64748b; margin: 0;">Anatomy model featuring skeletal structure and internal organs.</p>
+        </div>
+        <a href="frog-anatomy.html" class="card-btn">Launch 3D / AR View →</a>
+      </div>
+
+      <!-- Specimen Card 2 (Template for Next Specimen) -->
+      <div class="card">
+        <div>
+          <span class="card-badge">Specimen 02</span>
+          <h2>Eukaryotic Cell</h2>
+          <div class="scientific-name">Cellular Anatomy</div>
+          <p style="font-size: 0.85rem; color: #64748b; margin: 0;">Cross-section view showing organelles and membrane structure.</p>
+        </div>
+        <a href="eukarya.html" class="card-btn">Launch 3D / AR View →</a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>Interactive AR Biology Atlas • Compatible with iOS, Android, and Meta Quest 3</p>
+  </footer>
+
+</body>
+</html>
